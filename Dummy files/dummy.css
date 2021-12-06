@@ -1,0 +1,45 @@
+
+.sam-dropdown-list {
+    padding: 6px 0 5px;
+    @include user-select(none);
+    min-width: 200px;
+    > h5 {
+      padding: 0 15px;
+      margin: 6px 0 8px;
+    }
+    > ul {
+      margin: 0;
+      padding: 0;
+      > li {
+        list-style-type: none;
+        padding: 5px 10px 5px 42px;
+        position: relative;
+        &:hover,
+        &:focus {
+          background: #f4f5f7;
+        }
+        &.active {
+          background: #f4f5f7;
+          &::after {
+            content: "";
+            height: 7px;
+            width: 12px;
+            border-width: 0 0 2px 2px;
+            border-style: none none solid solid;
+            border-color: transparent transparent #454545 #454545;
+            /* @include rotate(-45); */
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 9px 8px 0 18px;
+          }
+        }
+        > span {
+          font-size: 13px;
+          font-weight: $font-weight-regular;
+          display: block;
+        }
+      }
+    }
+  
+  
